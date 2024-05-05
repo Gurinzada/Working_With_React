@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import BntLink from "../Components/BntLink";
 import { useNavigate } from "react-router-dom";
+import "../Styles/LoginPage.css"
 
 
 async function getInfos(){
@@ -24,9 +25,9 @@ export default function LoginPage(){
         e.preventDefault()
         const find = infos.find((user) => user.Email === email && user.Password === password)
 
-        const update = {...find, Online: true}
 
         if(find && find.Online === false){
+            const update = {...find, Online: true}
             await fetch(`http://localhost:3000/User/${find.id}`,{
                 method:"PUT",
                 body: JSON.stringify(update),
@@ -40,19 +41,26 @@ export default function LoginPage(){
     }
 
     return (
-        <main>
-            <form onSubmit={handleLogin}>
-                <div>
-                    <label htmlFor="EmailLogin">Email</label>
-                    <input type="email" name="" id="EmailLogin" value={email} onChange={(e) => setEmail(e.target.value)}/>
-                    <label htmlFor="PasswordLogin">Senha</label>
-                    <input type="password" id="PasswordLogin" value={password} onChange={(e) => setPassword(e.target.value)}/>
+        <main className="WrapperMain">
+            <form onSubmit={handleLogin} className="LoginForm">
+                <div className="WrapperLoginInputs">
+                    <h1>Faça seu login agora!</h1>
+                    <div className="ContentInput">
+                        <label htmlFor="EmailLogin" className="LabelInput">Email</label>
+                        <input type="email" name="" id="EmailLogin" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    </div>
+                    <div className="ContentInput">
+                        <label htmlFor="PasswordLogin" className="LabelInput">Senha</label>
+                        <input type="password" id="PasswordLogin" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    </div>
+                    <div>
+                        <button>Entrar</button>
+                        <BntLink to={"/"} textBnt={"Não possui conta?"} />
+                    </div>
                 </div>
-                <div>
-                    <button>Entrar</button>
-                    <BntLink to={"/"} textBnt={"Não possui conta?"} />
-                </div>
+                
             </form>
+            <div className="BackGroundDiv"></div>
         </main>
     )
 }

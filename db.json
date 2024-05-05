@@ -40,6 +40,17 @@
         "Estudar"
       ],
       "Online": false
+    },
+    {
+      "id": "06ee",
+      "FirstName": "Pedro",
+      "SecondName": "Silva ",
+      "Email": "exemplo@gmail.com",
+      "Password": "Ronron 123?",
+      "Gender": "M",
+      "Creation": "2024-05-05T11:24:48.487Z",
+      "List": [],
+      "Online": false
     }
   ]
 }

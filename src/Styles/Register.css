@@ -92,6 +92,14 @@ input:focus, select:focus{
     position: relative;
 }
 
+button{
+    cursor: pointer;
+}
+
+button:active{
+    margin-top: 0.5rem;
+}
+
 .Change{
     background-image: url('../assets/eye-svgrepo-com.svg');
     background-size: cover;

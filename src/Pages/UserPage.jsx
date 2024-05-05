@@ -15,7 +15,6 @@ export default function UserPage(){
     const edit = (index) => {
         setEditMode(true)
         setNewTitle(infos[0].List[index])
-        return index
     }
 
     const confirmEdit = async (e, index) => {
@@ -72,10 +71,10 @@ export default function UserPage(){
             headers: {
                 "Content-Type": "application/json"
             }
-        });
+        })
         // Atualizar o estado de atualização para acionar o useEffect
         setUpdate(true)
-    };
+    }
     
 
     const handleSubmit = async (e) => {
