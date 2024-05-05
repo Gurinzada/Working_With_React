@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "../Styles/Register.css"
 import BntLink from "../Components/BntLink"
 
 async function getMyData(){
@@ -8,7 +9,6 @@ async function getMyData(){
 
     return dataUser
 }
-
 
 export default function RegisterPage(){
 
@@ -19,6 +19,18 @@ export default function RegisterPage(){
     const [myPassordConfirmation, setMyPasswordConfirmation] = useState('')
     const [myGender, setMyGender] = useState('')
     const navigate = useNavigate()
+
+    const handleChangePassword = () => {
+        const inputPassword = document.getElementById('Password')
+        const eye = document.getElementById("Eye")
+        if(inputPassword.type === "password"){
+            inputPassword.type = "text"
+            eye.classList.add(`Close`)
+        } else{
+            inputPassword.type = "password"
+            eye.classList.remove(`Close`)
+        }
+    }
 
     function regexPassowrd(password, passwordConfirm){
         const regex = /^(?=.*[\W_]).{8,}$/gm
@@ -83,40 +95,63 @@ export default function RegisterPage(){
 }
 
     return(
-        <main>
-            <form method="post" onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="FirstName">Primeiro Nome</label>
-                    <input type="text" name="" id="FirstName" required value={myName} on onChange={(e) => setMyName(e.target.value)}/>
-                    <label htmlFor="SecondName">Sobrenome</label>
-                    <input type="text" name="" id="SecondName" required value={mySecondName} onChange={(e) => setMySecondName(e.target.value)}/>
+        <main className="WrapperRegister">
+            <form method="post" onSubmit={handleSubmit} className="FormList">
+                <h1 className="TitleForms">Registrar</h1>
+                <div className="Wrapper">
+                    <div className="ContentInput">
+                        <label htmlFor="FirstName" className="LabelInput">Primeiro Nome</label>
+                        <input type="text" name="" id="FirstName" required value={myName} on onChange={(e) => setMyName(e.target.value)}/>
+                    </div>
+                    <div className="ContentInput">
+                        <label htmlFor="SecondName" className="LabelInput">Sobrenome</label>
+                        <input type="text" name="" id="SecondName" required value={mySecondName} onChange={(e) => setMySecondName(e.target.value)}/>
+                    </div>                
                 </div>
-                <div>
-                    <label htmlFor="inputEmail">Email</label>
-                    <input type="email" name="" id="inputEmail" required value={myEmail} onChange={(e) => setMyEmail(e.target.value)}/>
+                <div className="Wrapper">
+                    <div className="ContentInput">
+                        <label htmlFor="inputEmail" className="LabelInput">Email</label>
+                        <input type="email" name="" id="inputEmail" required value={myEmail} onChange={(e) => setMyEmail(e.target.value)} placeholder="exemplo@email.com"/>
+                    </div>
                 </div>
-                <div>
-                    <label htmlFor="Password">Senha</label>
-                    <input type="password" name="" id="Password" required value={myPassword} onChange={(e) => setMyPassord(e.target.value)}/>
-                    <label htmlFor="PasswordConfirm">Confirme sua Senha</label>
-                    <input type="password" name="" id="PasswordConfirm" value={myPassordConfirmation} onChange={(e) => setMyPasswordConfirmation(e.target.value)}/>
+                <div className="Wrapper">
+                    <div className="ContentInput">
+                        <label htmlFor="Password" className="LabelInput">Senha</label>
+                        <input type="password" name="" id="Password" required value={myPassword} onChange={(e) => setMyPassord(e.target.value)} className="PasswordInput"/>
+                        <div className="Change" onClick={handleChangePassword} id="Eye"></div>
+                    </div>
+                    <div className="ContentInput">
+                        <label htmlFor="PasswordConfirm" className="LabelInput">Confirme sua Senha</label>
+                        <input type="password" name="" id="PasswordConfirm" value={myPassordConfirmation} onChange={(e) => setMyPasswordConfirmation(e.target.value)}/>
+                    </div>
                 </div>
-                <div>
-                    <label htmlFor="Gender">Genêro</label>
-                    <select name="" id="Gender" value={myGender} onChange={(e) => setMyGender(e.target.value)}>
-                        <option value="" disabled selected>Selecione uma opção</option>
-                        <option value="F">Feminino</option>
-                        <option value="M">Masculino</option>
-                    </select>
+                <div className="Wrapper">
+                    <div className="ContentInput">
+                        <label htmlFor="Gender" className="LabelInput">Genêro</label>
+                        <select name="" id="Gender" value={myGender} onChange={(e) => setMyGender(e.target.value)}>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="F">Feminino</option>
+                            <option value="M">Masculino</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div>
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" className="SignUpFor">Cadastrar</button>
+                </div>
+                <div>
+                    <BntLink textBnt={"Já possui conta?"} to={"/login"} classNameBnt={"BntLinkTo"} classNameLink={"LinkTo"}/>
                 </div>
             </form>
-            <section>
-            <BntLink textBnt={"Já possui conta?"} to={"/login"} classNameBnt={"BntLinkTo"} classNameLink={"LinkTo"}/>
+            <section className="HeroBackground">
+                
+                    <div className="WrapperTitle"><h1 className="TitleBack">Bem vindo a TaskSync</h1></div>
+                    <div className="WrapperP">
+                        <p className="Message">Guarde suas tarefas no melhor lugar possível!</p>
+                        <p className="Message">E nunca mais esqueça nada!</p>
+                    </div>
             </section>
+            
         </main>
     )
 }

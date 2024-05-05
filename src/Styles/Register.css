@@ -1,0 +1,173 @@
+.WrapperRegister{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    height: 100vh;
+}
+
+.TitleForms{
+    font-size: 2.35rem;
+}
+
+.HeroBackground{
+    background-image: url('../assets/Medio.jpg');
+    background-size: cover;
+}
+
+.FormList{
+    align-items: center;
+    background-color: #fbfcfd;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    justify-content: center;
+}
+
+.Wrapper{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+.ContentInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input{
+    border: 1px solid #b1fbff;
+    border-radius: 22px;
+    box-shadow: 0px 5px 2px 0px #b1fbff;
+    height: 2.5rem;
+    padding-left: 0.5rem;
+    width: 20.3125rem;
+}
+
+select{
+    border-radius: 22px;
+    border: 1px solid #b1fbff;
+    box-shadow: 0px 5px 2px 0px #b1fbff;
+    height: 1.4rem;
+    text-align: center;
+    width: 14rem;
+}
+
+.LabelInput{
+    color: #d79e02;
+    padding-left: 0.55rem;
+    font-size: 1.065rem;
+}
+
+input:focus, select:focus{
+    border: 2px solid #8e8e8e;
+    outline: none;
+}
+
+.SignUpFor{
+    border-radius: 22px;
+    border: 1px solid #b1fbff;
+    box-shadow: 0px 5px 2px 0px #b1fbff;
+    background-color: #fff;
+    color: #d79e02;
+    font-weight: 700;
+    height: 2rem;
+    width: 11.875rem;
+}
+
+.BntLinkTo{
+    border-radius: 22px;
+    border: 1px solid #b1fbff;
+    box-shadow: 0px 5px 2px 0px #b1fbff;
+    background-color: #fff;
+    color: #d79e02;
+    font-weight: 700;
+    width: 8.250rem;
+    height: 2rem;
+}
+
+.PasswordInput{
+    position: relative;
+}
+
+.Change{
+    background-image: url('../assets/eye-svgrepo-com.svg');
+    background-size: cover;
+    bottom: 53%;
+    cursor: pointer;
+    height: 30px;
+    left: 28.2%;
+    position: absolute;
+    right: 28%;
+    top: 53.2%;
+    width: 30px;
+}
+
+.Change.Close{
+    background-image: url('../assets/eye-slash-svgrepo-com.svg');
+}
+
+.HeroBackground{
+    align-items: center ;
+    display: flex;
+    flex-direction: column;
+    gap: 37rem;
+    justify-content: space-around;
+}
+
+.TitleBack{
+    font-size: 2.5rem;
+}
+
+.WrapperP{
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (max-width:1440px) {
+    .Change{
+        top: 58%;
+        left: 28.5%;
+    }
+}
+
+@media (max-width:1024px) {
+    .Change{
+        left: 32%;
+    }
+}
+
+@media (max-width: 768px) {
+    .WrapperRegister{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    input{
+        width: 13.75rem;
+    }
+
+    select{
+        width: 10rem;
+    }
+
+    .SignUpFor, .BntLinkTo{
+        width: 8.5rem;
+    }
+
+    .Change{
+        left: 59%;
+        top: 56.5%;
+    }
+}
+
+@media (max-width:426px) {
+    .Change{
+        left: 65.5%;
+        
+    }
+}
