@@ -1,0 +1,30 @@
+{
+  "User": [
+    {
+      "id": "d041",
+      "FirstName": "Augusto ",
+      "SecondName": "Mariano",
+      "Email": "augustoinacio243@gmail.com",
+      "Password": "Novasenha123?",
+      "Gender": "M",
+      "Creation": "2024-05-04T17:48:40.682Z",
+      "List": [
+        "Oi"
+      ],
+      "Online": false
+    },
+    {
+      "id": "9249",
+      "FirstName": "Teste",
+      "SecondName": "Teste",
+      "Email": "emailteste123@gmail.com",
+      "Password": "fodademais123@",
+      "Gender": "M",
+      "Creation": "2024-05-04T18:35:59.039Z",
+      "List": [
+        "lixo"
+      ],
+      "Online": true
+    }
+  ]
+}
