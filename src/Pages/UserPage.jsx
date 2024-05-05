@@ -52,7 +52,7 @@ export default function UserPage(){
         })
 
         setUpdate(true)
-        navigate("/")
+        navigate("/login")
     }
 
     const handleDeleteTask = async (index) => {

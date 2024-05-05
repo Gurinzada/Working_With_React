@@ -115,7 +115,7 @@ export default function RegisterPage(){
                 </div>
             </form>
             <section>
-                <BntLink textBnt={"Já possui conta?"} to={"/login"} classNameBnt={"BntLinkTo"} classNameLink={"LinkTo"}/>
+            <BntLink textBnt={"Já possui conta?"} to={"/login"} classNameBnt={"BntLinkTo"} classNameLink={"LinkTo"}/>
             </section>
         </main>
     )
