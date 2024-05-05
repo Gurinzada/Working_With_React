@@ -18,8 +18,7 @@ export default function LoginPage(){
 
     useEffect(() => {
         getInfos().then((res) => setMyInfos(res))
-        console.log(infos)
-    })
+    },[])
 
     const handleLogin = async (e) => {
         e.preventDefault()
@@ -44,7 +43,7 @@ export default function LoginPage(){
         <main className="WrapperMain">
             <form onSubmit={handleLogin} className="LoginForm">
                 <div className="WrapperLoginInputs">
-                    <h1>Faça seu login agora!</h1>
+                    <h1 className="TitleLogin">Faça seu login agora!</h1>
                     <div className="ContentInput">
                         <label htmlFor="EmailLogin" className="LabelInput">Email</label>
                         <input type="email" name="" id="EmailLogin" value={email} onChange={(e) => setEmail(e.target.value)}/>
@@ -53,14 +52,12 @@ export default function LoginPage(){
                         <label htmlFor="PasswordLogin" className="LabelInput">Senha</label>
                         <input type="password" id="PasswordLogin" value={password} onChange={(e) => setPassword(e.target.value)}/>
                     </div>
-                    <div>
-                        <button>Entrar</button>
-                        <BntLink to={"/"} textBnt={"Não possui conta?"} />
+                    <div className="BntWrapper">
+                        <button className="Bnt">Entrar</button>
+                        <BntLink to={"/"} textBnt={"Não possui conta?"} classNameBnt="Bnt" />
                     </div>
                 </div>
-                
             </form>
-            <div className="BackGroundDiv"></div>
         </main>
     )
 }

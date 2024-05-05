@@ -1,12 +1,14 @@
 .WrapperMain{
     display: grid;
-    grid-template-rows: 3fr 1fr;
     grid-template-columns: 1fr;
     height: 100vh;
 }
 
 .LoginForm{
     align-items: center;
+    background: #dbdede8d;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -15,19 +17,57 @@
 }
 
 .WrapperLoginInputs{
-    /* From https://css.glass */
-    background: rgba(14, 189, 255, 0.36);
+    align-items: center;
+    background: #f7f7f7;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.2px);
-    -webkit-backdrop-filter: blur(5.2px);
-    border: 1px solid rgba(14, 189, 255, 0.04);
+    backdrop-filter: blur(10.4px);
+    border: 2px solid rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2.5rem;
+    height: 21.875rem;
+    width: 28.125rem;
 }
 
 .ContentInput{
     display: flex;
     flex-direction: column;
+}
+
+.BntWrapper{
+    display: flex;
+    gap: 3rem;
+}
+
+.Bnt{
+    border-radius: 22px;
+    border: 1px solid #b1fbff;
+    box-shadow: 0px 5px 2px 0px #b1fbff;
+    background-color: #fff;
+    color: #d79e02;
+    font-weight: 700;
+    height: 1.5rem;
+    width: 9.375rem;
+}
+
+@media (max-width:768px) {
+    .WrapperLoginInputs{
+        width: 15rem;
+    }
+
+    .TitleLogin{
+        font-size: 1.5rem;
+    }
+    
+    .Bnt{
+        height: 2.5rem;
+        width: 6rem;
+    }
+
+    .BntWrapper{
+        gap: 1rem;
+    }
+    
 }
