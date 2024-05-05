@@ -17,9 +17,9 @@ Este pequeno projeto `for fun` aborda o desenvolvimento front-end, focando em tr
 # Imagens
 
 -Register Page
-[RegisterPage]('src/assets/RegisterDesktop.png')
+![RegisterPage](src/assets/RegisterDesktop.png)
 
-[RegisterPageMobile]('src/assets/RegisterMobile.png')
+![RegisterPageMobile](src/assets/RegisterMobile.png)
 
 
 
