@@ -51,6 +51,44 @@
       "Creation": "2024-05-05T11:24:48.487Z",
       "List": [],
       "Online": false
+    },
+    {
+      "id": "ebdb",
+      "FirstName": "João Bernardo",
+      "SecondName": "Andrade ",
+      "Email": "mikedasuat@gmail.com",
+      "Password": "wwe123456?",
+      "Gender": "M",
+      "Creation": "2024-05-05T23:03:09.673Z",
+      "List": [
+        "Não confundir a coleta do Arthur com água"
+      ],
+      "Online": false
+    },
+    {
+      "id": "c49b",
+      "FirstName": "Arthur",
+      "SecondName": "Pedroso",
+      "Email": "punhetanafaculdade@gmail.com",
+      "Password": "penis12356?",
+      "Gender": "M",
+      "Creation": "2024-05-06T01:04:31.784Z",
+      "List": [
+        "Bater punheta na faculdade",
+        "Lembrar o JB de não usar meu semem para beber"
+      ],
+      "Online": false
+    },
+    {
+      "id": "b22e",
+      "FirstName": "Teste",
+      "SecondName": "Teste",
+      "Email": "teste123@email.com.br",
+      "Password": "123456789@",
+      "Gender": "M",
+      "Creation": "2024-05-06T02:10:58.961Z",
+      "List": [],
+      "Online": true
     }
   ]
 }

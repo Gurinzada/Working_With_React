@@ -16,16 +16,20 @@ Este pequeno projeto `for fun` aborda o desenvolvimento front-end, focando em tr
 
 # Imagens
 
-+Register Page
+1.Register Page
 ![RegisterPage](src/assets/RegisterDesktop.png)
 
 ![RegisterPageMobile](src/assets/RegisterMobile.png)
 
-+Login Page
+2.Login Page
 ![LoginPage](src/assets/LoginDesktop.png)
 
 ![LoginPageMobile](src/assets/LoginMobile.png)
 
+3. User Page
+![UserPage](src/assets/UserDesktop.png)
+
+![UserPageMobile](src/assets/UserMobile.png)
 
 
 
